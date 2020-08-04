@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo " Arithmetic computation stimulation "
+echo " Heading changed "
 
 declare -A sorting
 
