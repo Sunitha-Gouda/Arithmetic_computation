@@ -18,7 +18,7 @@ exp3=$(($varc+$vara/$varb))
    echo " a+b/c = " $exp3
 
 exp4=$(($vara%$varb+$varc))
-   echo " a%b+c = " $exp4
+   echo " a-b+c = " $exp4
 
 
 sorting=([0]=$exp1 [1]=$exp2 [2]=$exp3 [3]=$exp4)
