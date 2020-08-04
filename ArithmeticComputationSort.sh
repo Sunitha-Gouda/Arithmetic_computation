@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 
 echo " Arithmetic computation stimulation "
 
@@ -27,5 +27,5 @@ sorting=([0]=$exp1 [1]=$exp2 [2]=$exp3 [3]=$exp4)
 for values in $sorting
 do
    echo "${sorting[@]}"
-done
-
+done | sort
+	echo ${sorting[@]}
