@@ -17,7 +17,7 @@ exp2=$(($vara*$varb+$varc))
 exp3=$(($varc+$vara/$varb))
    echo " a+b/c = " $exp3
 
-exp4=$(($vara%$varb+$varc))
+exp4=$(($vara-$varb+$varc))
    echo " a%b+c = " $exp4
 
 
