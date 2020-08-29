@@ -24,10 +24,45 @@ exp4=$(($vara-$varb+$varc))
 
 
 sorting=([0]=$exp1 [1]=$exp2 [2]=$exp3 [3]=$exp4)
-	echo "${sorting[@]}"
-
-for values in $sorting
-do
-   echo "${sorting[@]}"
-done | sort -nr
 	echo ${sorting[@]}
+
+for key   in ${!sorting[@]}
+do
+	array+=(${sorting[$key]})
+done
+	echo ${array[@]}
+
+lengthOfArray=${#array[@]}
+	echo "Length of an array is "$lengthOfArray
+
+#sorting array in descending order
+for ((i=0;i<$lengthOfArray;i++))
+do
+	for((j=$(($i+1));j<$lengthOfArray;j++))
+	do
+		if [ ${array[i]} -lt ${array[j]} ]
+		then
+				temp=${array[i]}
+				array[$i]=${array[j]}
+				array[$j]=$temp
+		fi
+	done
+done
+	echo "Array in descending order" ${array[@]}
+
+#sorting array in descending order
+
+for ((i=0;i<$lengthOfArray;i++))
+do
+   for((j=$(($i+1));j<$lengthOfArray;j++))
+   do
+      if [ ${array[i]} -gt ${array[j]} ]
+      then
+            temp=${array[i]}
+            array[$i]=${array[j]}
+            array[$j]=$temp
+      fi
+   done
+done
+	echo "Array in ascending order" ${array[@]}
+
